@@ -4,7 +4,7 @@
     "description": "Real time currency conversion API, offers conversion for over 170+ currencies",
     "main": "index.ts",
     "scripts": {
-        "test": "NODE_ENV=test jest --verbose --runInBand",
+        "test": "NODE_ENV=test npx jest --verbose --runInBand",
         "dev": "ts-node-dev --files --no-notify ./src/index.ts",
         "build": "rm -rf dist && tsc --sourceMap -p ./",
         "start": "node ./dist/index.js",
@@ -36,6 +36,7 @@
         "fastify": "^1.13.4",
         "fastify-blipp": "^1.2.1",
         "fastify-plugin": "^1.4.0",
+        "jest": "^24.0.0",
         "js-yaml": "^3.12.1",
         "mongoose": "^5.4.9",
         "source-map-support": "^0.5.10",

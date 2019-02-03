@@ -1,8 +1,6 @@
 import * as fastify from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
 
-import statusRoutes from '../src/routes/status';
-
 describe('/status', () => {
     let server: fastify.FastifyInstance<Server, IncomingMessage, ServerResponse>;
 
@@ -11,7 +9,6 @@ describe('/status', () => {
     beforeEach(async () => {
         server = fastify({});
         // eslint-disable-next-line global-require
-        server.register(statusRoutes);
         await server.ready();
 
         jest.clearAllMocks();
